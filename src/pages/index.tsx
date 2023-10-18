@@ -11,8 +11,9 @@ const Home = () => {
         <div className={styles.circleBody}>
           <div className={styles.mouth} />
           <div className={styles.hidehandRight} />
-          <div className={styles.hidehandLeft} />
+          {/* <div className={styles.hidehandLeft} /> */}
           <div className={styles.hideMouth} />
+          {/* <div className={styles.hideCircle} /> */}
           <div className={styles.cheekRight} />
           <div className={styles.cheekLeft} />
           <div className={styles.eyeRight}>

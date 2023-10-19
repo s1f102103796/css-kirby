@@ -1,9 +1,19 @@
+import { useState } from 'react';
 import styles from './index.module.css';
+import jumpStyles from './jump.module.css';
 
 const Home = () => {
+  const [isJumping, setIsJumping] = useState(false);
+
+  const handleButtonClick = () => {
+    setIsJumping(!isJumping);
+  };
+
   return (
     <div className={styles.basePoint}>
-      <div className={styles.all}>
+      <div className={styles.background} />
+      <div className={isJumping ? `${styles.allMove} ${jumpStyles['allMove']}` : styles.allMove}>
+        {/* <div className={styles.allMove}> */}
         <div className={styles.handRight} />
         <div className={styles.handLeft} />
         <div className={styles.footRight} />
@@ -28,6 +38,10 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      <button className={styles.jumpButton} onClick={handleButtonClick}>
+        Jump!
+      </button>
     </div>
   );
 };

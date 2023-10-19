@@ -9,39 +9,44 @@
 
 .all {
   position: absolute;
-  top: -150px;
-  left: -300px;
-  width: 600px;
+  top: -50px;
+  left: -250px;
+  width: 500px;
   height: 600px;
-
-  /* transform: translateX(-50%);
-  animation: poyon 1.2s infinite;
+  animation: poyooon 2s linear infinite;
 }
-
-@keyframes poyon {
+@keyframes poyooon {
   0% {
     transform: scale(1, 1) translate(0%, 0%);
   }
 
-  15% {
-    transform: scale(0.9, 0.9) translate(0%, 5%);
+  10% {
+    transform: scale(1, 0.9) translate(0%, 5%);
   }
 
-  30% {
-    transform: scale(1.3, 0.8) translate(0%, 10%);
+  40% {
+    transform: scale(1, 0.8) translate(0%, 15%);
   }
 
   50% {
-    transform: scale(0.8, 1.3) translate(0%, -10%);
+    transform: scale(1, 1) translate(0%, 0%);
   }
 
-  70% {
-    transform: scale(1.1, 0.9) translate(0%, 5%);
+  60% {
+    transform: scale(0.9, 1) translate(0%, -30%);
+  }
+
+  75% {
+    transform: scale(0.9, 1) translate(0%, -10%);
+  }
+
+  85% {
+    transform: scale(1.1, 0.8) translate(0%, 15%);
   }
 
   100% {
     transform: scale(1, 1) translate(0%, 0%);
-  } */
+  }
 }
 
 .handRight {
@@ -72,17 +77,30 @@
   transform: translateY(0%);
 
   /* transform-origin: 100% 50%; */
-  animation: spin 0.5s linear infinite;
-  animation-direction: alternate;
+  animation: handspin 2s linear infinite;
+
+  /* animation-direction: alternate; */
 }
 
-@keyframes spin {
+@keyframes handspin {
   0% {
     transform: rotate(0deg);
   }
 
-  100% {
-    transform: translateY(-130px) translateX(35px) rotate(70deg);
+  40% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-60px) translateX(-20px) rotate(35deg);
+  }
+
+  60% {
+    transform: translateY(-150px) translateX(90px) rotate(90deg);
+  }
+
+  75% {
+    transform: rotate(0deg);
   }
 }
 
@@ -96,6 +114,12 @@
   border: solid 12px #df3c82;
   border-radius: 100px 150px 50px 60px / 100px 150px 50px 70px;
   transform: translateX(-50%);
+  animation: footrightspin 2s linear infinite;
+}
+@keyframes footrightspin {
+  60% {
+    transform: translateX(-100px) translateY(-10px) rotate(60deg);
+  }
 }
 
 .footLeft {
@@ -108,6 +132,13 @@
   border: solid 12px #df3c82;
   border-radius: 150px 100px 60px 50px / 150px 100px 70px 50px;
   transform: translateX(-50%);
+  animation: footleftspin 2s linear infinite;
+}
+
+@keyframes footleftspin {
+  60% {
+    transform: translateX(-60px) translateY(-10px) rotate(-60deg);
+  }
 }
 
 .circleBody {

@@ -9,10 +9,10 @@
 
 .background {
   position: absolute;
-  top: calc(50% - 200px);
-  left: calc(50% - 500px);
-  width: 1000px;
-  height: 700px;
+  top: -100px;
+  left: -250px;
+  width: 500px;
+  height: 600px;
 
   /* background-color: #65ccfb; */
 }
@@ -24,6 +24,41 @@
   width: 500px;
   height: 600px;
   scale: 0.9;
+
+  /* animation: poyooon 2s linear infinite; */
+}
+@keyframes poyooon {
+  0% {
+    transform: scale(1, 1) translate(0%, 0%);
+  }
+
+  10% {
+    transform: scale(1, 0.9) translate(0%, 5%);
+  }
+
+  40% {
+    transform: scale(1, 0.8) translate(0%, 15%);
+  }
+
+  50% {
+    transform: scale(1, 1) translate(0%, 0%);
+  }
+
+  60% {
+    transform: scale(0.9, 1) translate(0%, -30%);
+  }
+
+  75% {
+    transform: scale(0.9, 1) translate(0%, -10%);
+  }
+
+  85% {
+    transform: scale(1.1, 0.8) translate(0%, 15%);
+  }
+
+  100% {
+    transform: scale(1, 1) translate(0%, 0%);
+  }
 }
 
 .handRight {
@@ -52,6 +87,34 @@
   border: solid 12px #df3c82;
   border-radius: 50%;
   transform: translateY(0%);
+
+  /* transform-origin: 100% 50%; */
+
+  /* animation: handspin 2s linear infinite; */
+
+  /* animation-direction: alternate; */
+}
+
+@keyframes handspin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  40% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-60px) translateX(-20px) rotate(35deg);
+  }
+
+  60% {
+    transform: translateY(-150px) translateX(90px) rotate(90deg);
+  }
+
+  75% {
+    transform: rotate(0deg);
+  }
 }
 
 .footRight {
@@ -64,6 +127,24 @@
   border: solid 12px #df3c82;
   border-radius: 100px 150px 50px 60px / 100px 150px 50px 70px;
   transform: translateX(-50%);
+
+  /* animation: footrightspin 2s linear infinite; */
+}
+@keyframes footrightspin {
+  40% {
+    border-radius: 100px 150px 50px 60px / 100px 150px 50px 70px;
+    transform: translateX(-90px) translateY(10px) rotate(0deg);
+  }
+
+  60% {
+    border-radius: 50%;
+    transform: translateX(-70px) translateY(-50px) rotate(-20deg);
+  }
+
+  90% {
+    border-radius: 100px 150px 50px 60px / 100px 150px 50px 70px;
+    transform: translateX(-90px) translateY(-10px) rotate(0deg);
+  }
 }
 
 .footLeft {
@@ -76,6 +157,23 @@
   border: solid 12px #df3c82;
   border-radius: 150px 100px 60px 50px / 150px 100px 70px 50px;
   transform: translateX(-50%);
+
+  /* animation: footleftspin 2s linear infinite; */
+}
+
+@keyframes footleftspin {
+  40% {
+    transform: translateX(-90px) translateY(10px) rotate(0deg);
+  }
+
+  60% {
+    border-radius: 50%;
+    transform: translateX(-60px) translateY(-10px) rotate(-60deg);
+  }
+
+  90% {
+    transform: translateX(-90px) translateY(-10px) rotate(0deg);
+  }
 }
 
 .circleBody {
@@ -148,7 +246,8 @@
 
   transform: translateY(0%);
   transform-origin: center;
-  animation: flow 1s linear infinite, spin 1s linear infinite;
+
+  /* animation: flow 1s linear infinite, spin 1s linear infinite; */
 
   /* animation: flow 1s linear infinite; */
 }
@@ -231,9 +330,6 @@
   height: 34px;
   background-color: #f7faf9;
   border-radius: 20px 20px 20px 20px / 35px 35px 35px 35px;
-
-  /* transition: 10s;
-  transform: rotate(360deg); */
 }
 
 .jumpButton {
@@ -243,5 +339,15 @@
   width: 100px;
   height: 40px;
   background-color: #8477e6;
+  border-radius: 45%;
+}
+
+.stopButton {
+  position: absolute;
+  top: 120px;
+  left: -400px;
+  width: 100px;
+  height: 40px;
+  background-color: #f57247;
   border-radius: 45%;
 }

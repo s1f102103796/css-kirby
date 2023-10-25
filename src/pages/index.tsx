@@ -4,7 +4,6 @@ import jumpStyles from './jump.module.css';
 
 const Home = () => {
   const [isJumping, setIsJumping] = useState(false);
-
   const handleButtonClick = () => {
     setIsJumping(!isJumping);
   };
@@ -15,9 +14,20 @@ const Home = () => {
       <div className={isJumping ? `${styles.allMove} ${jumpStyles['allMove']}` : styles.allMove}>
         {/* <div className={styles.allMove}> */}
         <div className={styles.handRight} />
-        <div className={styles.handLeft} />
-        <div className={styles.footRight} />
-        <div className={styles.footLeft} />
+        <div
+          className={isJumping ? `${styles.handLeft} ${jumpStyles['handLeft']}` : styles.handLeft}
+        />
+        {/* <div className={styles.handLeft} /> */}
+        <div
+          className={
+            isJumping ? `${styles.footRight} ${jumpStyles['footRight']}` : styles.footRight
+          }
+        />
+        {/* <div className={styles.footRight} /> */}
+        <div
+          className={isJumping ? `${styles.footLeft} ${jumpStyles['footLeft']}` : styles.footLeft}
+        />
+        {/* <div className={styles.footLeft} /> */}
         <div className={styles.circleBody}>
           <div className={styles.mouth} />
           <div className={styles.hidehandRight} />

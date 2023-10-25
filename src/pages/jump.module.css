@@ -24,7 +24,7 @@
   width: 500px;
   height: 600px;
   scale: 0.9;
-  animation: poyooon 2s linear;
+  animation: poyooon 2s linear infinite;
 }
 @keyframes poyooon {
   0% {
@@ -242,7 +242,8 @@
 
   transform: translateY(0%);
   transform-origin: center;
-  animation: flow 1s linear infinite, spin 1s linear infinite;
+
+  /* animation: flow 1s linear infinite, spin 1s linear infinite; */
 
   /* animation: flow 1s linear infinite; */
 }

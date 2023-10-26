@@ -74,8 +74,6 @@
   transform-origin: 50 0;
 }
 
-/* YourStyles.module.css */
-
 .handLeft {
   position: absolute;
   top: 235px;
@@ -235,24 +233,16 @@
   left: calc(50% - 205px);
   width: 100px;
   height: 70px;
-  background-color: #f6c7e2;
+
+  /* background-color: #f6c7e2; */
   border-radius: 50%;
 
   /* transform: rotateZ(0deg) translateX(-50%); */
 
   transform: translateY(0%);
   transform-origin: center;
-
-  /* animation: flow 1s linear infinite, spin 1s linear infinite; */
-
-  /* animation: flow 1s linear infinite; */
+  animation: handspin 2s linear infinite;
 }
-
-/* @keyframes flow {
-  100% {
-    transform: translateY(-100%);
-  }
-} */
 
 .cheekRight {
   position: absolute;

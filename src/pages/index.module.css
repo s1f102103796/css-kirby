@@ -4,7 +4,8 @@
   left: 50%;
   width: 4px;
   height: 4px;
-  background: #f00;
+
+  /* background: #f00; */
 }
 
 .background {
@@ -19,7 +20,7 @@
 
 .allMove {
   position: absolute;
-  top: -100px;
+  top: -120px;
   left: -250px;
   width: 500px;
   height: 600px;
@@ -221,20 +222,22 @@
 
 .jumpButton {
   position: absolute;
-  top: 60px;
-  left: -400px;
+  top: 400px;
+  left: calc(50% - 80px);
   width: 100px;
   height: 40px;
   background-color: #8477e6;
   border-radius: 45%;
+  transform: translateX(-50%);
 }
 
 .walkButton {
   position: absolute;
-  top: 120px;
-  left: -400px;
+  top: 400px;
+  left: calc(50% + 80px);
   width: 100px;
   height: 40px;
   background-color: #f57247;
   border-radius: 45%;
+  transform: translateX(-50%);
 }

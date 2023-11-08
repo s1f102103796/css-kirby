@@ -226,7 +226,10 @@
   left: calc(50% - 80px);
   width: 100px;
   height: 40px;
-  background-color: #8477e6;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #343300;
+  background-color: #18a8cb;
   border-radius: 45%;
   transform: translateX(-50%);
 }
@@ -237,7 +240,10 @@
   left: calc(50% + 80px);
   width: 100px;
   height: 40px;
-  background-color: #f57247;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #343300;
+  background-color: #f7f632;
   border-radius: 45%;
   transform: translateX(-50%);
 }

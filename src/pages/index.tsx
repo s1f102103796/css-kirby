@@ -8,7 +8,7 @@ const Home = () => {
   const [isWalking, setIsWalking] = useState(false);
 
   const [isMobile, setIsMobile] = useState(true);
-  const scale = isMobile ? '0.3' : '0.8';
+  const scale = isMobile ? '0.7' : '0.8';
   //const font = isMobile ? 15 : 50;
 
   const JumpButtonClick = () => {

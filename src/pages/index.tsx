@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './index.module.css';
 import jumpStyles from './jump.module.css';
 import walkStyles from './walk.module.css';
@@ -6,6 +6,10 @@ import walkStyles from './walk.module.css';
 const Home = () => {
   const [isJumping, setIsJumping] = useState(false);
   const [isWalking, setIsWalking] = useState(false);
+
+  const [isMobile, setIsMobile] = useState(true);
+  const scale = isMobile ? '0.3' : '0.8';
+  //const font = isMobile ? 15 : 50;
 
   const JumpButtonClick = () => {
     setIsJumping(!isJumping);
@@ -15,6 +19,12 @@ const Home = () => {
     setIsWalking(!isWalking);
     setIsJumping(false);
   };
+
+  useEffect(() => {
+    console.log(navigator.userAgent);
+    setIsMobile(/(iPhone|Android.+Mobile)/.test(navigator.userAgent));
+    // const userDevice = navigator.userAgent;
+  }, []);
 
   return (
     <div className={styles.basePoint}>
@@ -27,6 +37,7 @@ const Home = () => {
             ? `${styles.allMove} ${walkStyles['allMove']}`
             : styles.allMove
         }
+        style={{ scale }}
       >
         <div
           className={
